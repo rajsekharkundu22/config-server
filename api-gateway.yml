@@ -89,6 +89,12 @@ spring:
             - Path=/recommendation/**
           filters:
             - RewritePath=/recommendation(?<segment>/?.*), $\{segment}
+        - id: FeedbackService
+          uri: http://localhost:8686
+          predicates:
+            - Path=/feedback/**
+          filters:
+            - RewritePath=/feedback(?<segment>/?.*), $\{segment}
 
 
 

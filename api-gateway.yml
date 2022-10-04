@@ -76,12 +76,12 @@ spring:
           filters:
             - RewritePath=/owner(?<segment>/?.*), $\{segment}
 
-        - id: ChatService
-          uri: http://localhost:9597
-          predicates:
-            - Path=/chat/**
-          filters:
-            - RewritePath=/chat(?<segment>/?.*), $\{segment}
+        #- id: ChatService
+         # uri: http://localhost:9597
+          #predicates:
+           # - Path=/chat/**
+         # filters:
+          #  - RewritePath=/chat(?<segment>/?.*), $\{segment}
 
         - id: RecommendationService
           uri: http://localhost:8686
